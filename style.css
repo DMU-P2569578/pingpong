@@ -1,0 +1,183 @@
+/*Aplying variables that select all elements in the html document*/ /*In this case "root" is specifying which colors willbe used*/
+:root{
+  --primary:#ffffff;
+  --secundary:#000000;
+  --background:#35495e;
+  --black-text:rgb(61, 61, 61);
+  --blue-gradient:linear-gradient(90deg,#42b983,#35495e);
+  --button-hover:#ff99ff;
+}
+/*The element "*" will make that all the browsers and devices work under the same rules*/
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+ font-size: 100%;
+
+}
+nav {
+  /*An example of the ":root" element*/
+  background-color: var(--primary);
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+}
+nav ul li{
+  border-right: 1px solid rgba(92, 89, 89, 0.41);
+}
+header h1{
+  color: var(--black-text);
+  font-size: 2rem;
+  letter-spacing: .5rem;
+}
+/* "Last child"represents the last element among a group of elements*/
+nav ul li:last-child{
+  border-right: none;
+}
+nav ul li a{
+  color:var(--black-text);
+  font-size: 1.2rem;
+  padding: .7rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+nav ul li a:hover{
+  background-color: var(--button-hover);
+  transition: all .3s;
+  border-bottom: solid .1rem var(--secundary)
+}
+
+.drawer{
+  font-size: 1rem;
+  color: var(--black-text);
+  float: left;
+  cursor: pointer;
+  display: none;
+  margin-left: 1rem;
+  border: solid 1.5px var(--black-text);
+  padding: .2rem;
+  border-radius: .1rem;
+}
+/*Selecting the checkbox and hidding the element*/
+#ckbox{
+  display: none;
+}
+/*Aplying different styles*/
+@media (max-width:1039px) {
+
+      nav{
+          justify-content: flex-start;
+      }
+      .drawer{
+          display: block;
+      }
+
+      nav h1{
+          margin-left: 1rem;
+      }
+
+      ul {
+          position: fixed;
+          width: 50%;
+          height: 100vh;
+          background-color: var(--background);
+          top: 10vh;
+          left:-100%;
+          text-align: left;
+          transition: all .5s;
+          display: flex;
+          flex-direction: column;
+          align-content: stretch;
+      }
+
+      nav ul li {
+          padding: 1rem 0;
+          display: flex;
+          flex-direction: column;
+          padding-left: 2rem;
+          border-bottom: solid .1rem rgba(201, 196, 196, 0.4);
+      }
+
+      #ckbox:checked  ~ .boxmenu{
+          left:0;
+      }
+  }
+
+
+  .buttonicon{
+    padding: 8px 20px;
+    background-color: white ;
+    border: none;
+    border-radius: 50px;
+    cursor:  pointer;
+  }
+
+  .banner {
+  padding: 200px;
+  width: 100vh;
+  text-align: center;
+  background-image:url(images/code.jpg);
+  background-size: cover;
+	background-position: center center;
+  width: 100%;
+
+}
+.banner h1, h2 {
+  color: white;
+  text-decoration-color: white;
+  align-items: center;
+
+
+}
+ /*Adding spaces and limits to sections in order to avoid mixing elements rules*/
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about {
+  box-sizing: border-box;
+  top: 5px;
+  position: relative;
+
+  }
+  .about2 p span {
+background-color: #ff0000;
+color: var(--primary);
+border-radius: 50%;
+display: inline-block;
+width: 30px;
+height: 30px;
+padding: 3px;
+
+
+
+  }
+  .about h1, h2, p {
+    color: var(--black-text);
+    margin: 5px;
+    padding: 15px;
+  }
+.learn {
+  float: left;
+
+}
+.steps {
+  float: right;
+}
+
+.signup {
+  text-align: center;
+}

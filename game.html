@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- adding the mobile device viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lecture</title>
+    <!-- making the conection with the css file-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- referencing an icon image-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<!--font style brought from a website -->
+        <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <!--creating the top bar or menu -->
+      <nav>
+        <!-- Drawer is an element that contains other elements. In this case is the base for the lateral menu panel-->
+        <!-- The check box element allows the user to select the drawer/menu-->
+        <input type="checkbox" id="ckbox">
+        <label for="ckbox" class="drawer">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </label>
+
+        <h1>TimeMachine</h1>
+              <!--the list element is to specify a menu. The class "fa fa" imports icons from a website -->
+              <!-- with the "a" element we are creating a "link" and with "href" we give a direction-->
+        <ul class="boxmenu">
+          <li><a href="index.html" class="fa fa-home">home</a></li>
+        <li><a href="game.html" class="fa fa-code">code</a></li>
+        <li><a href="lecture.html" class="fa fa-gamepad">History</a></li>
+        <li><a href="index.html#login" class="menulogin-2">
+           Log In </a>
+            </li>
+        </ul>
+        <!-- second menu for the log in and sign up button. With the anchor element we point to the sign up area of the index document. We stylize the elemnts in the form of a button-->
+        <ul class="boxmenu2">
+          <li><a href="index.html#login" class="menulogin">
+              <button type="button" name="button" class="buttonicon2"> Log In </button></a>
+              </li>
+              <li><a href="index.html#login" class="menulogin">
+                  <button type="button" name="button" class="buttonicon2"> Sign Up </button></a></li>
+        </ul>
+
+      </nav>
+    </header>
+    <!-- Sections allows to specify and work within areas and not to mess with other areas-->
+<section>
+  <!-- Div defines a division, which can be stylized-->
+  <div class="pong">
+    <!-- the vh or vw element are font sizes that adapts to any browser running the website -->
+    <h1 style="font-size:5vw"> Lecture #5</h1>
+    <h2 style="font-size:4vw"> The Pong Videogame</h2>
+    <p>This is an example of the full course. You have to sign up to unlock all the lectures and
+    additional materials.</p>
+  </div>
+  <p>In this lesson we will learn how to create a Ping-Pong video game.</p>
+  <p>This  is a two-dimensional game that simulates a table tennis game. The user, or users, controls an in-game paddle by moving it vertically across the top and the bottom sides of the screen.
+Players use the paddles to hit a ball back and forth. The game finishes when a player reach eleven points before the opponent; a point is made when your opponent fails to return the ball.
+</p>
+
+</section>
+
+
+<section>
+<div class="accordion">
+<div class="contentBx">
+  <div class="label">Step One</div>
+  <div class="content">
+    <p>
+      First you will need to create an html document.
+
+Then add a "canvas" element if you wish to create some style around the game and give it some style creating a “css” folder and “css” file . However, is not necessary.  </p>
+<p>
+
+Add the "script"tag before the body closing tag "/body". It is important to add the script at the end, as the browser will read your
+code starting from the beginning, so if you add your script at the beginning your html file won’t display properly.</p>
+
+<p>Create the JavaScript folder and file and add the source in the html document. However, you can write the code between the script tags in the html.</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="accordion">
+<div class="contentBx">
+  <div class="label">Step Two</div>
+  <div class="content">
+    <p>Before you write the code for the game it is important to understand what are you doing and why.</p>
+    <p>Here you have explanations about every order, element and function you are going to write.</p>
+    <p>
+    <strong>Var</strong> or variables are containers in which you can store values. You must first declare the variable with the keyword "var" or "let", followed by the name you want to give it. <br>
+    Then you can add the value.
+      Example: Var nameOfTheVariable = 'ponggame';
+      <br>Variables can have many types of values: numbers (10), booleans (true/false), strings (''), [] (you can add more values inside), objects (reference any object)
+    </p>
+    <p>
+<strong>Operations</strong>. An operation is a mathematical symbol that can act on values and produce a result. <br>
+Example: -, *, /. There are more complex operations: "===" Checks if two values are equal to each other, and returns a value of true or false.
+    </p>
+    <p>
+      <strong>Conditions</strong> they are code structures that allow you to check whether an expression is true or not, and then executes a different code depending on the result.<br>
+The data inside "if" (data) uses the identity operator to compare the variable, string or the elemnts specified in the data. If this comparison is true, the block of code executes.
+If not, that code is skipped and the second block, if there is a second block, of code after the "else" statement is executed.
+    </p>
+    <p>
+    <strong>Functions</strong> are a way of encapsulating a functionality that you want to use, so that you can call that function
+      with a single name, and you won't have to write the entire code every time you use it. <br> The functions can be seen with the parenthesis symbol "()". <br>
+      Example: function divide(num1,num2) {
+  let result = num1 / num2;
+  return result;
+}
+    </p>
+    <p>
+<strong>Events</strong> are code structures that capture what happens in the browser, and allow the code to be executed in response to the actions that occur with the code. <br>
+Example: document.addEvent('click'). When the user clicks in the document or object specified, the code will be executed.
+    </p>
+  </div>
+</div>
+</div>
+
+
+<div class="accordion">
+<div class="contentBx">
+  <div class="label">Code</div>
+  <div class="content">
+    <p>
+      // Global Variables <br>
+var DIRECTION = {<br>
+	IDLE: 0,<br>
+	UP: 1,<br>
+	DOWN: 2,<br>
+	LEFT: 3,<br>
+	RIGHT: 4, <br>
+};
+</p>
+<p>
+var rounds = [5, 5, 3, 3, 2]; <br>
+var colors = ['#1abc9c', '#2ecc71', '#3498db', '#e74c3c', '#9b59b6'];
+</p>
+<p>
+// The ball object (The cube that bounces back and forth)<br>
+var Ball = {<br>
+	new: function (incrementedSpeed) {<br>
+		return {<br>
+			width: 18,<br>
+			height: 18,<br>
+			x: (this.canvas.width / 2) - 9,<br>
+			y: (this.canvas.height / 2) - 9,<br>
+			moveX: DIRECTION.IDLE,<br>
+			moveY: DIRECTION.IDLE,<br>
+			speed: incrementedSpeed || 9<br>
+		};<br>
+	}<br>
+};<br>
+</p>
+<p>
+// The paddle object (The two lines that move up and down)<br>
+var Paddle = {<br>
+	new: function (side) {<br>
+		return {<br>
+			width: 18,<br>
+			height: 70,<br>
+			x: side === 'left' ? 150 : this.canvas.width - 150,<br>
+			y: (this.canvas.height / 2) - 35,<br>
+			score: 0,<br>
+			move: DIRECTION.IDLE,<br>
+			speed: 10<br>
+		};<br>
+	}<br>
+};<br>
+</p>
+<p>
+var Game = {<br>
+	initialize: function () {<br>
+		this.canvas = document.querySelector('canvas');<br>
+		this.context = this.canvas.getContext('2d');<br>
+
+		this.canvas.width = 1400;<br>
+		this.canvas.height = 1000;<br>
+
+		this.canvas.style.width = (this.canvas.width / 2) + 'px';<br>
+		this.canvas.style.height = (this.canvas.height / 2) + 'px';<br>
+
+		this.player = Paddle.new.call(this, 'left');<br>
+		this.paddle = Paddle.new.call(this, 'right');<br>
+		this.ball = Ball.new.call(this);<br>
+
+		this.paddle.speed = 8;<br>
+		this.running = this.over = false;<br>
+		this.turn = this.paddle;<br>
+		this.timer = this.round = 0;<br>
+		this.color = '#2c3e50';<br>
+
+		Pong.menu();<br>
+		Pong.listen();<br>
+	},<br>
+</p>
+<p>
+	endGameMenu: function (text) {<br>
+		// Change the canvas font size and color<br>
+		Pong.context.font = '50px Courier New';<br>
+		Pong.context.fillStyle = this.color;<br>
+
+		// Draw the rectangle behind the 'Press any key to begin' text.<br>
+		Pong.context.fillRect(<br>
+			Pong.canvas.width / 2 - 350,<br>
+			Pong.canvas.height / 2 - 48,<br>
+			700,<br>
+			100<br>
+		);<br>
+
+		// Change the canvas color;<br>
+		Pong.context.fillStyle = '#ffffff';<br>
+
+		// Draw the end game menu text ('Game Over' and 'Winner')<br>
+		Pong.context.fillText(text,<br>
+			Pong.canvas.width / 2,<br>
+			Pong.canvas.height / 2 + 15<br>
+		);<br>
+
+		setTimeout(function () {<br>
+			Pong = Object.assign({}, Game);<br>
+			Pong.initialize();<br>
+		}, 3000);<br>
+	},<br>
+
+	menu: function () {<br>
+		// Draw all the Pong objects in their current state<br>
+		Pong.draw();<br>
+
+		// Change the canvas font size and color<br>
+		this.context.font = '50px Courier New';<br>
+		this.context.fillStyle = this.color;<br>
+
+		// Draw the rectangle behind the 'Press any key to begin' text.<br>
+		this.context.fillRect(<br>
+			this.canvas.width / 2 - 350,<br>
+			this.canvas.height / 2 - 48,<br>
+			700,<br>
+			100<br>
+		);<br>
+
+		// Change the canvas color;<br>
+		this.context.fillStyle = '#ffffff';<br>
+
+		// Draw the 'press any key to begin' text<br>
+		this.context.fillText('Press any key to begin',<br>
+			this.canvas.width / 2,<br>
+			this.canvas.height / 2 + 15<br>
+		);<br>
+	},<br>
+  </p>
+<p>
+	// Update all objects (move the player, paddle, ball, increment the score, etc.)<br>
+	update: function () {<br>
+		if (!this.over) {<br>
+			// If the ball collides with the bound limits - correct the x and y coords.<br>
+			if (this.ball.x <= 0) Pong._resetTurn.call(this, this.paddle, this.player);<br>
+			if (this.ball.x >= this.canvas.width - this.ball.width) Pong._resetTurn.call(this, this.player, this.paddle);<br>
+			if (this.ball.y <= 0) this.ball.moveY = DIRECTION.DOWN;<br>
+			if (this.ball.y >= this.canvas.height - this.ball.height) this.ball.moveY = DIRECTION.UP;<br>
+
+			// Move player if they player.move value was updated by a keyboard event<br>
+			if (this.player.move === DIRECTION.UP) this.player.y -= this.player.speed;<br>
+			else if (this.player.move === DIRECTION.DOWN) this.player.y += this.player.speed;<br>
+
+			// On new serve (start of each turn) move the ball to the correct side<br>
+			// and randomize the direction to add some challenge.<br>
+			if (Pong._turnDelayIsOver.call(this) && this.turn) {<br>
+				this.ball.moveX = this.turn === this.player ? DIRECTION.LEFT : DIRECTION.RIGHT;<br>
+				this.ball.moveY = [DIRECTION.UP, DIRECTION.DOWN][Math.round(Math.random())];<br>
+				this.ball.y = Math.floor(Math.random() * this.canvas.height - 200) + 200;<br>
+				this.turn = null;<br>
+			}<br>
+
+			// If the player collides with the bound limits, update the x and y coords.<br>
+			if (this.player.y <= 0) this.player.y = 0;<br>
+			else if (this.player.y >= (this.canvas.height - this.player.height)) this.player.y = (this.canvas.height - this.player.height);<br>
+
+			// Move ball in intended direction based on moveY and moveX values<br>
+			if (this.ball.moveY === DIRECTION.UP) this.ball.y -= (this.ball.speed / 1.5);<br>
+			else if (this.ball.moveY === DIRECTION.DOWN) this.ball.y += (this.ball.speed / 1.5);<br>
+			if (this.ball.moveX === DIRECTION.LEFT) this.ball.x -= this.ball.speed;<br>
+			else if (this.ball.moveX === DIRECTION.RIGHT) this.ball.x += this.ball.speed;<br>
+
+			// Handle paddle (AI) UP and DOWN movement<br>
+			if (this.paddle.y > this.ball.y - (this.paddle.height / 2)) {<br>
+				if (this.ball.moveX === DIRECTION.RIGHT) this.paddle.y -= this.paddle.speed / 1.5;<br>
+				else this.paddle.y -= this.paddle.speed / 4;<br>
+			}<br>
+			if (this.paddle.y < this.ball.y - (this.paddle.height / 2)) {<br>
+				if (this.ball.moveX === DIRECTION.RIGHT) this.paddle.y += this.paddle.speed / 1.5;<br>
+				else this.paddle.y += this.paddle.speed / 4;<br>
+			}<br>
+
+			// Handle paddle (AI) wall collision<br>
+			if (this.paddle.y >= this.canvas.height - this.paddle.height) this.paddle.y = this.canvas.height - this.paddle.height;<br>
+			else if (this.paddle.y <= 0) this.paddle.y = 0;<br>
+
+			// Handle Player-Ball collisions<br>
+			if (this.ball.x - this.ball.width <= this.player.x && this.ball.x >= this.player.x - this.player.width) {<br>
+				if (this.ball.y <= this.player.y + this.player.height && this.ball.y + this.ball.height >= this.player.y) {<br>
+					this.ball.x = (this.player.x + this.ball.width);<br>
+					this.ball.moveX = DIRECTION.RIGHT;<br>
+
+					beep1.play();<br>
+				}<br>
+			}<br>
+
+			// Handle paddle-ball collision<br>
+			if (this.ball.x - this.ball.width <= this.paddle.x && this.ball.x >= this.paddle.x - this.paddle.width) {<br>
+				if (this.ball.y <= this.paddle.y + this.paddle.height && this.ball.y + this.ball.height >= this.paddle.y) {<br>
+					this.ball.x = (this.paddle.x - this.ball.width);<br>
+					this.ball.moveX = DIRECTION.LEFT;<br>
+
+					beep1.play();<br>
+				}<br>
+			}<br>
+		}<br>
+    </p>
+<p>
+		// Handle the end of round transition<br>
+		// Check to see if the player won the round.<br>
+		if (this.player.score === rounds[this.round]) {<br>
+			// Check to see if there are any more rounds/levels left and display the victory screen if<br>
+			// there are not.<br>
+			if (!rounds[this.round + 1]) {<br>
+				this.over = true;<br>
+				setTimeout(function () { Pong.endGameMenu('Winner!'); }, 1000);<br>
+			} else {<br>
+				// If there is another round, reset all the values and increment the round number.<br>
+				this.color = this._generateRoundColor();<br>
+				this.player.score = this.paddle.score = 0;<br>
+				this.player.speed += 0.5;<br>
+				this.paddle.speed += 1;<br>
+				this.ball.speed += 1;<br>
+				this.round += 1;<br>
+
+				beep3.play();<br>
+			}<br>
+		}<br>
+		// Check to see if the paddle/AI has won the round.<br>
+		else if (this.paddle.score === rounds[this.round]) {<br>
+			this.over = true;<br>
+			setTimeout(function () { Pong.endGameMenu('Game Over!'); }, 1000);<br>
+		}<br>
+	},<br>
+<br>
+</p>
+<p>
+	// Draw the objects to the canvas element<br>
+	draw: function () {<br>
+		// Clear the Canvas<br>
+		this.context.clearRect(<br>
+			0,<br>
+			0,<br>
+			this.canvas.width,<br>
+			this.canvas.height<br>
+		);<br>
+
+		// Set the fill style to black<br>
+		this.context.fillStyle = this.color;<br>
+
+		// Draw the background<br>
+		this.context.fillRect(<br>
+			0,<br>
+			0,<br>
+			this.canvas.width,<br>
+			this.canvas.height<br>
+		);<br>
+<br>
+		// Set the fill style to white (For the paddles and the ball)<br>
+		this.context.fillStyle = '#ffffff';<br>
+
+		// Draw the Player<br>
+		this.context.fillRect(<br>
+			this.player.x,<br>
+			this.player.y,<br>
+			this.player.width,<br>
+			this.player.height<br>
+		);<br>
+<br>
+		// Draw the Paddle<br>
+		this.context.fillRect(<br>
+			this.paddle.x,<br>
+			this.paddle.y,<br>
+			this.paddle.width,<br>
+			this.paddle.height<br>
+		);<br>
+
+		// Draw the Ball<br>
+		if (Pong._turnDelayIsOver.call(this)) {<br>
+			this.context.fillRect(<br>
+				this.ball.x,<br>
+				this.ball.y,<br>
+				this.ball.width,<br>
+				this.ball.height<br>
+			);<br>
+		}<br>
+<br>
+</p>
+<p>
+		// Draw the net (Line in the middle)<br>
+		this.context.beginPath();<br>
+		this.context.setLineDash([7, 15]);<br>
+		this.context.moveTo((this.canvas.width / 2), this.canvas.height - 140);<br>
+		this.context.lineTo((this.canvas.width / 2), 140);<br>
+		this.context.lineWidth = 10;<br>
+		this.context.strokeStyle = '#ffffff';<br>
+		this.context.stroke();<br>
+
+		// Set the default canvas font and align it to the center<br>
+		this.context.font = '100px Courier New';<br>
+		this.context.textAlign = 'center';<br>
+
+		// Draw the players score (left)<br>
+		this.context.fillText(<br>
+			this.player.score.toString(),<br>
+			(this.canvas.width / 2) - 300,<br>
+			200<br>
+		);<br>
+
+		// Draw the paddles score (right)<br>
+		this.context.fillText(<br>
+			this.paddle.score.toString(),<br>
+			(this.canvas.width / 2) + 300,<br>
+			200<br>
+		);<br>
+<br>
+		// Change the font size for the center score text<br>
+		this.context.font = '30px Courier New';<br>
+
+		// Draw the winning score (center)<br>
+		this.context.fillText(<br>
+			'Round ' + (Pong.round + 1),<br>
+			(this.canvas.width / 2),<br>
+			35<br>
+		);<br>
+
+		// Change the font size for the center score value<br>
+		this.context.font = '40px Courier';<br>
+
+		// Draw the current round number<br>
+		this.context.fillText(<br>
+			rounds[Pong.round] ? rounds[Pong.round] : rounds[Pong.round - 1],<br>
+			(this.canvas.width / 2),<br>
+			100<br>
+		);<br>
+	},<br>
+
+	loop: function () {<br>
+		Pong.update();<br>
+		Pong.draw();<br>
+
+		// If the game is not over, draw the next frame.<br>
+		if (!Pong.over) requestAnimationFrame(Pong.loop);<br>
+	},<br>
+  </p>
+<p>
+	listen: function () {<br>
+		document.addEventListener('keydown', function (key) {<br>
+			// Handle the 'Press any key to begin' function and start the game.<br>
+			if (Pong.running === false) {<br>
+				Pong.running = true;<br>
+				window.requestAnimationFrame(Pong.loop);<br>
+			}<br>
+
+			// Handle up arrow and w key events<br>
+			if (key.keyCode === 38 || key.keyCode === 87) Pong.player.move = DIRECTION.UP;<br>
+
+			// Handle down arrow and s key events<br>
+			if (key.keyCode === 40 || key.keyCode === 83) Pong.player.move = DIRECTION.DOWN;<br>
+		});<br>
+
+		// Stop the player from moving when there are no keys being pressed.<br>
+		document.addEventListener('keyup', function (key) { Pong.player.move = DIRECTION.IDLE; });<br>
+	},<br>
+
+	// Reset the ball location, the player turns and set a delay before the next round begins.<br>
+	_resetTurn: function(victor, loser) {<br>
+		this.ball = Ball.new.call(this, this.ball.speed);<br>
+		this.turn = loser;<br>
+		this.timer = (new Date()).getTime();<br>
+
+		victor.score++;<br>
+		beep2.play();<br>
+	},<br>
+<br>
+	// Wait for a delay to have passed after each turn.<br>
+	_turnDelayIsOver: function() {<br>
+		return ((new Date()).getTime() - this.timer >= 1000);<br>
+	},<br>
+
+</p>
+<p>
+	// Select a random color as the background of each level/round.<br>
+	_generateRoundColor: function () {<br>
+		var newColor = colors[Math.floor(Math.random() * colors.length)];<br>
+		if (newColor === this.color) return Pong._generateRoundColor();<br>
+		return newColor;<br>
+	}<br>
+};<br>
+</p>
+
+<p>
+var Pong = Object.assign({}, Game);<br>
+Pong.initialize();</p>
+    <p> The code has been accesed trough: <a href="https://codepen.io/gdube/pen/JybxxZ"> codepen.io</a>
+
+    </p>
+  </div>
+</div>
+</div>
+<footer>
+  <p>Ali Siddibeh Kurubally. P2569578. Tech1015 CW2 project</p>
+</footer>
+</section>
+<!-- The script element is not referenced to a separate file. Instead is directly written in the same html document -->
+<script>
+/*A constant is a data structure that contains information that will never change.In this case the constant is the accordion.*/
+/* To reference the document we are applying the javascript we use getelement and is followed by "id" or "classname"*/
+ const accordion = document.getElementsByClassName
+ /*we use the round brackets to specify the name or id*/
+ ('contentBx');
+ /* the for statement creates a loop or "movement" to execute. The loop stops if the condition is "false"*/
+for (i = 0; i <accordion.length; i++){
+  /*the statement function executes the code. The Event statement calls a function when an event happens. In this case to open and close the accordion.*/
+  accordion[i].addEventListener('click', function(){
+    this.classList.toggle('active')
+  })
+}
+</script>
+</body>
+</html>

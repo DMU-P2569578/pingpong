@@ -1,0 +1,402 @@
+/*Aplying variables that select all elements in the html document*/
+/*In this case "root" is specifying which colors will be used. Is a faster way to proced if you do not know how to writte certain colors*/
+:root {
+  --primary: #ffffff;
+  --secundary: #000000;
+  --background: #35495e;
+  --black-text: rgb(61, 61, 61);
+  --blue-gradient: linear-gradient(90deg, #42b983, #35495e);
+  --button-hover: #31FFF3;
+}
+
+/*The element "*" will make that all the browsers and devices work under the same rules*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*the body element is used to select andpoint all the body area*/
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+}
+/* pointing the nav element     */
+nav {
+  /*An example of the ":root" element*/
+  background-color: var(--primary);
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 3px solid #31FFF3;
+}
+/* referencing the elements inside the nav */
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  border-right: 1px solid rgba(92, 89, 89, 0.41);
+}
+
+/*  referencing the header and the fonts   */
+
+header h1 {
+  color: var(--black-text);
+  font-size: 2rem;
+  letter-spacing: .5rem;
+}
+
+/* "Last child"represents the last element among a group of elements*/
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li a {
+  color: var(--black-text);
+  font-size: 2rem;
+  padding: .7rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* the point is used to reference a class name    */
+.menulogin-2{
+  display: none;
+  cursor: none;
+}
+
+
+/*  the hover changes the style or properties of an element whent the element is selected.   */
+
+.boxmenu a:hover {
+  background-color: var(--button-hover);
+  transition: all .3s;
+  border-bottom: solid .1rem var(--secundary)
+}
+
+.drawer {
+  font-size: 1rem;
+  color: var(--black-text);
+  float: left;
+  cursor: pointer;
+  display: none;
+  margin-left: 1rem;
+  border: solid 1.5px var(--black-text);
+  padding: .2rem;
+  border-radius: .1rem;
+}
+
+/*Selecting the checkbox and hidding the element*/
+#ckbox {
+  display: none;
+}
+
+/*creating the menu box using the media element. The @media is used in media queries to apply different styles for different media types/devices. Now we are changing the statements for the nav element.
+*/
+@media (max-width:1039px) {
+  nav {
+    justify-content: flex-start;
+  }
+
+  .drawer {
+    display: block;
+  }
+
+  nav h1 {
+    margin-left: 1rem;
+  }
+
+  ul {
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--primary);
+    top: 10vh;
+    left: -100%;
+    text-align: left;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+  }
+
+  nav ul li {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    border-bottom: solid .1rem rgba(201, 196, 196, 0.4);
+  }
+  .menulogin-2{
+    display: flex;
+    cursor: pointer;
+    margin: auto;
+    font-size: 1rem;
+}
+
+
+  #ckbox:checked~.boxmenu {
+    left: 0;
+  }
+}
+
+
+/* the point is used to reference a class name and   subsequent elements   */
+
+.buttonicon {
+  padding: 8px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.buttonicon2 {
+  padding: 8px 20px;
+  background-color: #31FFF3;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 400;
+}
+
+.banner {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  width: 100%;
+  margin: auto;
+  font-size: 80%;
+  text-align: center;
+  background-image: url(../images/banner1.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: var(--primary);
+}
+
+/*Adding spaces and limits to sections in order to avoid mixing elements and objects*/
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.about {
+  padding-top: 100px;
+  box-sizing: border-box;
+  top: 5px;
+  position: relative;
+}
+.learn{
+  max-width: 50%;
+  max-height: none;
+  margin: 4px;
+}
+.icon{
+  width: auto;
+  height: auto;
+}
+.about2 p span {
+  background-color: #ff0000;
+  color: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+}
+
+.about h1, h2, p {
+  color: var(--black-text);
+  margin: 5px;
+  padding: 15px;
+}
+
+.learn {
+  float: left;
+}
+
+.signuparea {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  width: 100%;
+  text-align: center;
+  background-image: url(../images/banner2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about2 {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.column1 {
+  border: 2px solid #31FFF3;
+  border-radius: 10px;
+  float: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin: 50px;
+  position: relative;
+}
+
+.column2 {
+  border: 2px solid #31FFF3;
+  border-radius: 10px;
+  float: left;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 60px;
+  padding-bottom: 33px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin: 50px;
+  position: relative;
+}
+.game {
+  margin: auto;
+  width: 50%;
+    padding: 10px;
+}
+
+/* Lecture page. Referencing the modal window*/
+
+.modal-container{
+  display: flex;
+  background-color: rgba(0,0,0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+
+}
+
+
+.show{
+  pointer-events: all;
+  opacity: 1;
+}
+.modal{
+  background-color: white;
+  width: 600px;
+  max-width: 600px;
+  padding:30px;
+  border-radius: 5px;
+  text-align: center;
+}
+.modal h1 {
+  color: blue;
+}
+/**/
+.modal2{
+  background-color: white;
+  width: 600px;
+  max-width: 100%;
+  padding:30px;
+  border-radius: 5px;
+  text-align: center;
+}
+.modal2 h1 {
+  color: white
+}
+
+
+/**/
+.modal3{
+  background-color: white;
+  width: 600px;
+  padding:30px;
+  border-radius: 5px;
+  text-align: center;
+}
+.modal3 h1 {
+  color: white
+}
+
+
+.closebutton {
+  background-color: #35495e;
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 5px;
+}
+.imglecture{
+  cursor: pointer;
+  width: 100%;
+  height: 350px;
+  padding: 4px;
+  margin: 0;
+}
+
+
+/*Accordion section*/
+.accordion{
+  max-width: 800px;
+}
+
+.contentBx{
+  position: relative;
+  margin: 10px 20px;
+}
+
+.label{
+  position: relative;
+  padding: 10px;
+  background: #2694af;
+  color: #fff;
+  cursor: pointer;
+}
+/*:: before creates a pseudo-element that is the first child of the selected element.*/
+.label::before{
+  content: '+';
+  position:absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
+/* Active represents an item that the user is activating. In this case we are giving the aesthetics for the element is selected ( the "-")*/
+.accordion .contentBx.active .label::before{
+  content: '-';
+}
+.contentBx .content{
+  position: relative;
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+  overflow-y: auto;
+}
+
+.contentBx.active .content{
+  height: 150px;
+  padding: 10px;
+}
+
+
+
+
+/* footer section*/
+
+footer {
+  background-color: #31FFF3;
+  padding: 5px;
+
+}
